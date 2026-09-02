@@ -1,0 +1,1 @@
+class Workle extends AudioWorkletProcessor{constructor(s){super(s),this.port.onmessage=s=>{this.buf=s.data.buf}}process(s,r,e){const t=r[0][0];if(this.buf){let s=0;for(let r=0;r<t.length;r++)t[r]=this.buf[s],7&r||(s=31&++s)}return!0}}registerProcessor("wrk",Workle);
